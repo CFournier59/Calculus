@@ -1,2 +1,2 @@
-# AzerType_2
-New Version of an existing OpenClassroom project with Javascript. 
+# Calculus
+Evolution of Azertype_2 with an improved design. Focused on the math game only.
