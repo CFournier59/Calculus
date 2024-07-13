@@ -4,51 +4,125 @@
  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+/**
+ * Eléments principaux
+ */
+
+ body {
+
+    background: linear-gradient(to bottom, black 46%, #fd07aa );
+    font-family: Sofia Sans ;
+    color: white;
+    font-weight: 600;
+}
+
+ header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 17px;
 }
 
 /**
  * Eléments génériques
  */
 
-body {
-    --color-primary: #041b15;
-    --color-secondary:#16db65 ;
-    --color-tertiary: #2b3132;  
-    background-color:#beedaa;  
+p{
+    width: 220px;
+    height: 120px;
+    font-size: 20px;
+    position: relative;
+    top: 30px;
 }
+
+.grey{
+    background-color: #252525;
+}
+
+.linearRed{
+    background: linear-gradient(-24deg,  #ff2f01 14%, black 50%);
+}
+
+.linearBlue{
+    background: linear-gradient(-24deg,  #01d1ff 14%, black 50%);
+}
+
+.linearGreen{
+    background: linear-gradient(-24deg,  #71ff01 14%, black 50%);
+}
+
+.panelBackground{
+    align-self: center;
+    width: 900px;
+    height: 540px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel{
+    width: 280px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    width: 134px;
+    height: 134px;
+}
+
+.game{
+    font-family: Spline Sans;
+    font-size: 32px;
+    position: relative;
+    bottom: 61px;
+}
+
 
 /* Mise en forme des titres */
 h1 {
-    margin: 10px;
-    font-size: 60px;
-    font-weight: 900;
-    color: var(--color-primary);
+    margin-top: 30px;
+    font-size: 128px;
+    font-weight: 1000;
+    text-align: center;    
 }
 
-h1 span{
-    color : var(--color-secondary);
+h3 {
+    color: #fd07aa;
+    font-size: 36px;
 }
 
 h2 {
     margin: 10px;
     font-size: 30px;
     font-weight: 600;
-    color: var(--color-secondary);
-}
-
-h3 {
-    margin: 10px;
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--color-secondary);
 }
 
 /* Mise en forme des formulaires */
-input[type='radio'] {
-    filter: grayscale(1); /* Grayscale passe le bouton en niveau de gris */
-}
-
 
 input[type='text'],
 input[type='email'] {
@@ -69,76 +143,37 @@ input[type='email']::placeholder {
     opacity: 50%;
 }
 
-button {
-    padding: 5px;
+button {  
     border: none;
-    border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 17px;
-    color: var(--color-secondary);
-    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Spline Sans;
+    font-weight: 500;
+    font-size: 32px;
+    background-color: #fd07aa;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.25) ;
+    color: white;
+}
+
+.a{
+   width: 155px;
+   height: 99px;
+   position: relative;
+   bottom: 135px;
+
 }
 
 button:hover {
-    color: var(--color-primary);
-    background-color: var(--color-tertiary);
+    background-color: #d90692;
+    color: #d9d9d9;
     cursor: pointer;
+    box-shadow: none;
 }
 
-button:focus {
-    background-color: var(--color-tertiary);
-    border: 3px solid var(--color-primary);
-    padding: 2px;
-    
-}
-
-/**
- * Eléments principaux
- */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif; 
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    min-width: 200px;
-    margin-bottom: 50px;
-    padding: 50px;
-    text-align: center;
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 30px;
-    background-color: var(--color-secondary);
-}
-
-footer {
-    position: sticky;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 30px;
-    font-weight: 600;
-    font-size: 17px;
-    color: white;
-    background-color: var(--color-secondary);
+button:active{
+    background-color:#b00577 ;
+    color: #b3b3b3;
+    box-shadow: inset 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 /**

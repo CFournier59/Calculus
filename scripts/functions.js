@@ -3,13 +3,8 @@
 // la fonction qui indique le score 
 function retournerMessageScore(score){
 
-    //sur la page prinicipale
-    let spanScore = document.querySelector(".zoneScore span")
-    spanScore.innerText = `${score}`
-    //et sur la popup
-    let scoreFin = document.querySelector("#description div")
-    scoreFin.innerText = `${score}` 
-
+    let divScore = document.querySelector(".score")
+    divScore.innerText = `${score}`  
 }
 
 // la fonction qui vérifie le score et le personnalise

@@ -3,17 +3,15 @@
 function lancerJeu(){
 
     //  paramétres initiaux   
-    let i = 0 
     let score = 0
-    let inputEcriture = document.getElementById("inputEcriture")
+
     //affichage des informations
-    retournerMessageScore(score, i)
-    afficherPropositions("Validez avec la touche Entrée")
+    retournerMessageScore(score)
+
     //on vide le champ de saisie et on le désactive 
-    inputEcriture.value = ""
-    inputEcriture.disabled = true  
+
     // démarage de la partie au click du bouton start
-    let startBtn = document.getElementById("startBtn")
+    let startBtn = document.getElementById("start")
     startBtn.addEventListener("click", () => {
 
         lancerCalcul(inputEcriture, i, startBtn, score)
@@ -21,7 +19,7 @@ function lancerJeu(){
     })
                    
     // Gestion du popup de partage
-    initAddEventListenerPopup()
+    
       
 }
 

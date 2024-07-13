@@ -4,10 +4,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AzerType 2</title>
+        <title>Calculus</title>
         <!-- Inclusion du fichier css pour le style du jeu -->
         <link rel="stylesheet" href="style/style.css">
-
+        <!-- font utilisées -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
         <!-- Inclusion des scripts nécessaires pour faire fonctionner le jeu -->
         <!-- Attention, l'ordre des fichiers js est important.  -->
         <script src="scripts/config.js" defer></script>
@@ -19,26 +25,27 @@
     <body>
         <!-- HEADER -->
         <header>
-            <h1>AzerType <span>2</span></h1>
-            <h2>L'application pour écrire plus vite les mots</h2>
-            <h3>On peut aussi s'entraîner au calcul mental!</h3>
+            <h1>Calculus</h1>
+            <h3>C'est le moment de voir si tu es vif en calcul!</h3>
         </header>
         <!-- MAIN -->
         <main>
-            <p>2) Cliquez sur "C'est parti!" pour commencer</p>
-            <div class="zoneProposition">
-                Azerty
+            <div class="panelBackground grey">
+                <div class="panel linearRed">
+                    <p>Addition, soustractions, multiplications... Résout-en le plus possible!</p>
+                    <img class="icon" src="images/icon_2.png">
+                    <div class="game score">0</div>
+                </div>
+                <div class="panel linearBlue">
+                    <p>Utilise ton claiver pour taper la réponse et valide avec la touche "Entrée"</p>
+                    <button id="start" class="button a">START</button>
+                </div>
+                <div class="panel linearGreen">
+                    <p>Tu as 30 secondes pour déchainer tes neurones. Bon courage!</p>
+                    <img class="icon" src="images/icon_1.png">
+                    <div class="game time">30s</div>
+                </div>    
             </div>
-            <div class="zoneSaisie">
-                <input type="text" id="inputEcriture" name="inputEcriture" placeholder="Écrivez ici!">
-                <button id="startBtn">C'est parti!</button>
-            </div>
-            <div class="zoneScore">
-                Votre score : <span>0</span>
-            </div>
-            <div class="zonePartage">
-                <button>Partager</button>
-            </div>    
         </main>
         <!-- FOOTER -->
         <footer>

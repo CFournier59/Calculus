@@ -20,7 +20,7 @@ function lancerCalcul(inputEcriture, i, startBtn, score){
     
             let inputEcriture = document.getElementById("inputEcriture")
             let nombre3 = Number(inputEcriture.value)
-            let answer = 0
+            let answer = null
             // résolution du calcul
             switch (modificateur[i]){
 
