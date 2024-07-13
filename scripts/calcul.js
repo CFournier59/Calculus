@@ -3,7 +3,6 @@ function lancerCalcul(inputEcriture, i, startBtn, score){
   
     // vérouillage du choix
     let zoneOptions = document.querySelector(".zoneOptions")
-    zoneOptions.classList.add("d-none")
     // activation de la zone d'écriture
     inputEcriture.disabled = false
     inputEcriture.focus()
