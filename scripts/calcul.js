@@ -1,80 +1,35 @@
 
-function lancerCalcul(inputEcriture, i, startBtn, score){
-  
-    // vérouillage du choix
-    let zoneOptions = document.querySelector(".zoneOptions")
-    // activation de la zone d'écriture
-    inputEcriture.disabled = false
-    inputEcriture.focus()
-    // vérouillage du bouton start
-    startBtn.disabled = true
-    // génération et affichage du calcul à résoudre
-    let nombre1 = randomNumber()
-    let nombre2 = randomNumber()
-    melangeur(modificateur)
-    afficherPropositions(nombre1 + modificateur[i] + nombre2)
-    //ajout de l'event pour entrer les réponses
-    inputEcriture.addEventListener('keypress', function (e) {
-    
-        if (e.key === 'Enter') { 
-    
-            let inputEcriture = document.getElementById("inputEcriture")
-            let nombre3 = Number(inputEcriture.value)
-            let answer = null
-            // résolution du calcul
-            switch (modificateur[i]){
-
-                case " + ":
-
-                    answer = nombre1 + nombre2
-                    break
-
-                case " - ":
-
-                    answer = nombre1 - nombre2
-                    break
-
-                case " X ":
-
-                    answer = nombre1 * nombre2
-                    
-            }
-
-            // comparaison des réponses
-            if(nombre3 === answer) {
-
-                borderSuccess()
-                score ++
-                checkScore(score)
-                nombre1 = randomNumber()
-                nombre2 = randomNumber()
-                melangeur(modificateur)
-                afficherPropositions(nombre1 + modificateur[i] + nombre2)
-                
-            }
-
-            else{
-
-                borderFail()
-
-            }
-            
-            inputEcriture.value = ""
-            retournerMessageScore(score)
-            
-            }
-    
-        }); 
-
-    //lancement du compte à rebours
-    compteARebours(inputEcriture)
-    //Gestion du Formulaire de la popup
-    let form = document.querySelector(".popup form")
-    form.addEventListener("submit", (event) => {
-      
-        event.preventDefault()
-        gererFormulaire(score)
-              
-    })
+function lancerCalcul(startBtn,){
+ 
+    // transformation du bouton start en zone de saisie
+    let divBlue = document.getElementById("divBlue")
+    console.log(divBlue)
+    divBlue.innerHTML = `<p id= "i2">Utilise ton clavier pour taper la réponse et valide avec la touche "Entrée"</p><input maxlength = "2" type = "text" id="answer" name = "answer" class="a grey">`
+    let answer = document.getElementById("answer")
+    answer.focus()
+    // gestion du score
+    let score = document.querySelector(".score")
+    // cacher les consignes
+    for(let i = 1 ; i < 4 ; i++){
    
+        let hideText = document.querySelector(`#i${i}`);  
+        hideText.classList.add("hide");
+    }
+    // affichage du calcul
+    let main = document.querySelector("main")
+    let question = document.createElement("div")
+    question.id = "question"
+    question.innerHTML = `<div id = "1" class = "number">0</div><div id = "symbol" class = "number">X</div><div id = "2" class = "number">0</div>`
+    main.prepend(question)
+
+
+   //  `<div id = "question"><div id = "1" class = "number">0</div><div id = "symbol" class = "number">X</div><div id = "2" class = "number">0</div></div>`
+
+
 }
+        
+
+
+
+
+   

@@ -59,6 +59,22 @@ p{
     background-color: #252525;
 }
 
+.hide{
+    color: rgba(0, 0, 0, 0);
+}
+
+.red{
+    color:#ff2f01 ;
+}
+
+.blue{
+    color : #01d1ff;
+}
+
+.green{
+    color: #71ff01;
+}
+
 .linearRed{
     background: linear-gradient(-24deg,  #ff2f01 14%, black 50%);
 }
@@ -69,6 +85,21 @@ p{
 
 .linearGreen{
     background: linear-gradient(-24deg,  #71ff01 14%, black 50%);
+}
+
+#question{
+    width: 313px;
+    height: 115px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 365px;
+
+}
+
+.number{
+    font-size: 96px;
 }
 
 .panelBackground{
@@ -124,7 +155,6 @@ h2 {
 
 /* Mise en forme des formulaires */
 
-input[type='text'],
 input[type='email'] {
     width: 100%;
     margin-right: 10px;
@@ -146,7 +176,6 @@ input[type='email']::placeholder {
 button {  
     border: none;
     text-align: center;
-    border-radius: 20px;
     font-family: Spline Sans;
     font-weight: 500;
     font-size: 32px;
@@ -160,6 +189,7 @@ button {
    height: 99px;
    position: relative;
    bottom: 135px;
+   border-radius: 20px;
 
 }
 
@@ -189,34 +219,15 @@ button:active{
     margin-left: 20px;
 }
 
-/* Zone ou sera affiché le texte (mot ou phrase) à afficher */
-.zoneProposition {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0 10px 0;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: white;
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--color-primary);
-}
-
 .fail{
     border : solid red 4px;
 }
 
 /* Zone de saisie */
-.zoneSaisie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30px;
-    gap:10px;
+#answer{
+    color: #fd07aa;
+    font-size: 64px;
+    text-align: center;
 }
 
 /* Eléments du formulaire de saisie */
