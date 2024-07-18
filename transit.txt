@@ -2,37 +2,7 @@
   
     // vérouillage du bouton start
     startBtn.disabled = true
-    // génération et affichage du calcul à résoudre
-    let nombre1 = randomNumber()
-    let nombre2 = randomNumber()
-    melangeur(modificateur)
-    afficherPropositions(nombre1 + modificateur[i] + nombre2)
-    //ajout de l'event pour entrer les réponses
-    inputEcriture.addEventListener('keypress', function (e) {
     
-        if (e.key === 'Enter') { 
-    
-            let inputEcriture = document.getElementById("inputEcriture")
-            let nombre3 = Number(inputEcriture.value)
-            let answer = null
-            // résolution du calcul
-            switch (modificateur[i]){
-
-                case " + ":
-
-                    answer = nombre1 + nombre2
-                    break
-
-                case " - ":
-
-                    answer = nombre1 - nombre2
-                    break
-
-                case " X ":
-
-                    answer = nombre1 * nombre2
-                    
-            }
 
             // comparaison des réponses
             if(nombre3 === answer) {

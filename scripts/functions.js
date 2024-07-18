@@ -53,27 +53,42 @@ function checkScore(score){
 }
 
 // fonction qui mélange les mots ou les chiffres
-function melangeur(listeMots){
+function melangeur(modificateur){
 
-    for (let index = listeMots.length - 1; index > 0; index--) {
+    for (let index = modificateur.length - 1; index > 0; index--) {
 
         const j = Math.floor(Math.random() * (index + 1));
-        [listeMots[index], listeMots[j]] = [listeMots[j], listeMots[index]];
+        [modificateur[index], modificateur[j]] = [modificateur[j], modificateur[index]];
     }
 
-    listeMots.slice(0, 100); 
-    return listeMots
+    modificateur.slice(0, 100); 
+    return modificateur
 
 }
 
-// La fonction qui affiche les propostitions
-function afficherPropositions(listeProposition){
+// La fonction qui colore le symbol
 
-    let zoneProposition = document.querySelector(".zoneProposition")
-    zoneProposition.innerText = listeProposition
+function symbolColor(symbol){
 
+    switch(symbol.innerText){
+
+        case "+":
+
+            symbol.classList.add("red")
+            break
+
+        case "-":
+
+            symbol.classList.add("blue")
+            break
+
+        case "X":
+
+            symbol.classList.add("green")
+
+    }
+    
 }
-
 // Les fonctions qui signalent au besoin si la réponse est fausse
 
 function borderFail(){
