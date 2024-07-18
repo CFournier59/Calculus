@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculus</title>
         <!-- Inclusion du fichier css pour le style du jeu -->
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/popup.css">
         <!-- font utilisées -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,28 +50,35 @@
         </main>
         <!-- FOOTER -->
         <footer>
-            @Copyright : Openclassrooms. 
+            @Copyright : CFournier59. 
         </footer>
-        <!-- Popup de partage -->
-        <div class="popupBackground">
-            <div class="popup">
-                <div>Votre score</div>
+        <!-- Popup de fin de partie -->
+        <div class="popupBackground d-none">
+            <div class="popup linearRed">
+                <h2>C'est Terminé !</h2>
                 <div id = "scoreCard">
-                    <img src = "images/calcul_1.png">
                     <div id = "description">
+                        <p id="finalScore">SCORE FINAL :</p>
                         <div>0</div>
                         <p>Visiblement t'as pas inventé l'eau chaude...</p>
                     </div>
-                </div>              
-                <div>Partagez-le!</div>
-                <form novalidate>
-                    <label for="nom">Votre nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
-                    <input type="email" id="email" name="email" placeholder="nom@domaine.com">
-                    <button id="btnEnvoyerMail">Envoyer</button>
-                </form>
+                    <img src = "images/calcul_1.png">
+                </div>
+                <div id="buttonContainer">
+                    <button></button>
+                    <button></button>
+                </div>          
             </div>
         </div>
+        <!--popup de partage-->
+        <div class="d-none"> 
+            <form novalidate>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
+        </div>       
     </body>
 </html>

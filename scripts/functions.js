@@ -149,7 +149,7 @@ function compteARebours(answer){
         if (sec < 0) {
             clearInterval(timer)
             answer.disabled = true
-            afficherPopup()
+            togglePopup()
         }
     }, 1000)
 }

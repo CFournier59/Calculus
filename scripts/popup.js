@@ -8,22 +8,14 @@
 /**
  * Cette fonction affiche la popup pour partager son score. 
  */
-function afficherPopup() {
+function togglePopup() {
     let popupBackground = document.querySelector(".popupBackground")
     // La popup est masquée par défaut (display:none), ajouter la classe "active"
     // va changer son display et la rendre visible. 
-    popupBackground.classList.add("active")
+    popupBackground.classList.toggle("d-none")
 }
 
-/**
- * Cette fonction cache la popup pour partager son score. 
- */
-function cacherPopup() {
-    let popupBackground = document.querySelector(".popupBackground")
-    // La popup est masquée par défaut (display:none), supprimer la classe "active"
-    // va rétablir cet affichage par défaut. 
-    popupBackground.classList.remove("active")
-}
+
 
 
 /**
