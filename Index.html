@@ -33,16 +33,16 @@
         <main>
             <div class="panelBackground grey">
                 <div class="panel linearRed">
-                    <p id = "i1">Addition, soustractions, multiplications... Résout-en le plus possible!</p>
+                    <p id = "i1" class="hint">Addition, soustractions, multiplications... Résout-en le plus possible!</p>
                     <img class="icon" src="images/icon_2.png">
                     <div class="game score">0</div>
                 </div>
                 <div id="divBlue" class="panel linearBlue">
-                    <p id = "i2">Utilise ton clavier pour taper la réponse et valide avec la touche "Entrée"</p>
+                    <p id = "i2" class="hint">Utilise ton clavier pour taper la réponse et valide avec la touche "Entrée"</p>
                     <button id="start" class="button a">START</button>
                 </div>
                 <div class="panel linearGreen">
-                    <p id = "i3">Tu as 30 secondes pour déchainer tes neurones. Bon courage!</p>
+                    <p id = "i3" class="hint">Tu as 30 secondes pour déchainer tes neurones. Bon courage!</p>
                     <img class="icon" src="images/icon_1.png">
                     <div class="game time">30s</div>
                 </div>    
@@ -54,24 +54,24 @@
         </footer>
         <!-- Popup de fin de partie -->
         <div class="popupBackground d-none">
-            <div class="popup linearRed">
+            <div id="popupScore" class="popup linearRed">
                 <h2>C'est Terminé !</h2>
                 <div id = "scoreCard">
                     <div id = "description">
-                        <p id="finalScore">SCORE FINAL :</p>
-                        <div>0</div>
+                        <div class="scoreFinal">SCORE FINAL :</div>
+                        <div id="finalScore" class="red">0</div>
                         <p>Visiblement t'as pas inventé l'eau chaude...</p>
                     </div>
                     <img src = "images/calcul_1.png">
                 </div>
                 <div id="buttonContainer">
-                    <button></button>
-                    <button></button>
+                    <button class="button b">PARTAGER</button>
+                    <button class="button b">RECOMMENCER</button>
                 </div>          
             </div>
         </div>
         <!--popup de partage-->
-        <div class="d-none"> 
+        <div id="popupPartage" class="d-none popup"> 
             <form novalidate>
                 <label for="nom">Votre nom</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom">

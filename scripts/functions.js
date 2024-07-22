@@ -3,34 +3,41 @@
 // la fonction qui indique le score 
 function retournerMessageScore(score){
     let divScore = document.querySelector(".score")
-    divScore.innerText = `${score}`  
+    divScore.innerText = `${score}` 
+    let finalScore = document.getElementById("finalScore")
+    finalScore.innerText = `${score}`
 }
 // la fonction qui vérifie le score et le personnalise
-function checkScore(score){
+function checkScore(score, finalScore){
     let scorePicture = document.querySelector("#scoreCard img")
     let scoreDescription = document.querySelector("#description p")
+    let popupScore = document.getElementById("popupScore")
     switch (score) {
         case 8 :        
             scorePicture.srcset =  "images/calcul_2.png"
             scorePicture.src = scorePicture.srcset
             scoreDescription.innerText = "C'est pas pire, mais tu peux faire mieux."
             break
-        case 16 :         
+        case 15 :         
             scorePicture.srcset =  "images/calcul_3.png"
             scorePicture.src = scorePicture.srcset
             scoreDescription.innerText = "Ça commence à cogiter là-dedans!"
+            finalScore.classList.replace("red", "blue")
+            popupScore.classList.replace("linearRed", "linearBlue")
             break
-        case 20 :         
+        case 19 :         
             scorePicture.srcset =  "images/calcul_4.png"
             scorePicture.src = scorePicture.srcset
             scoreDescription.innerText = "Les neuronnes sont en feu!!"
             break
-        case 22 :         
+        case 21 :         
             scorePicture.srcset =  "images/calcul_5.png"
             scorePicture.src = scorePicture.srcset
             scoreDescription.innerText = "T'es une p*tain de légende!!!"
+            finalScore.classList.replace("blue", "green")
+            popupScore.classList.replace("linearBlue", "linearGreen")
             break
-        case 29 :        
+        case 28 :        
             scorePicture.srcset =  "images/calcul_6.png"
             scorePicture.src = scorePicture.srcset
             scoreDescription.innerText = "01001110 01 11101000110 11100000010100 10"             

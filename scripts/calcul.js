@@ -26,7 +26,7 @@ function lancerCalcul(startBtn,){
             // comparaison des réponses
             if( Number(answer.value) === goodAnswer) {
                 score ++
-                checkScore(score)
+                checkScore(score, finalScore)
                 goodAnswer = generateMath()              
             }
             else{             
