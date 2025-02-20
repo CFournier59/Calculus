@@ -8,13 +8,31 @@
 /**
  * Cette fonction affiche la popup pour partager son score. 
  */
-function togglePopup() {
-    let popupBackground = document.querySelector(".popupBackground")
+
+//function togglePopup() {
+    //let popupBackground = document.querySelector(".popupBackground")
     // La popup est masquée par défaut (display:none), ajouter la classe "active"
     // va changer son display et la rendre visible. 
-    popupBackground.classList.toggle("d-none")
+    //popupBackground.classList.toggle("d-none")
+//}
+
+
+function lowOpacity() {
+     document.querySelector(".popupBackground").style.backgroundColor = "rgba(255, 255, 255, 0.5)"
+     document.querySelector("header").style.opacity = "0.5"
+     document.querySelector("footer").style.opacity = "0.5"
 }
 
+function togglePopup() {
+    document.getElementById("question").style.display = "none"
+    let panelBackground = document.querySelector(".panelBackground")
+    panelBackground.classList.add("d-none")
+    let popupScore = document.getElementById("popupScore")
+    popupScore.style.display = "flex"
+    document.getElementById("restartButton").addEventListener("click", () => {
+        location.reload()
+    })
+}
 
 
 
