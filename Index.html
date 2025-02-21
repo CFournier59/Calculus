@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
-        <!-- Inclusion des scripts nécessaires pour faire fonctionner le jeu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <!-- Inclusion des scripts nécessaires pour faire fonctionner le jeu -->
         <!-- Attention, l'ordre des fichiers js est important.  -->
         <script src="scripts/config.js" defer></script>
         <script src="scripts/popup.js" defer></script>
@@ -49,7 +49,7 @@
                             <div class="game time">30s</div>
                         </div>    
                     </div>
-                    <div id="popupScore" class="popup linearRed">
+                    <div id="popupScore" class="popup linearRed d-none">
                         <h2>C'est Terminé !</h2>
                         <div id = "scoreCard">
                             <div id = "description">
@@ -60,31 +60,46 @@
                             <img src = "images/calcul_1.png">
                         </div>
                         <div id="buttonContainer">
-                            <button class="button b" >PARTAGER</button>
-                            <button class="button b" id="restartButton">RECOMMENCER</button>
+                            <button class="button b" id="shareButton" >PARTAGER</button>
+                            <button class="button b" id="restartButton" >RECOMMENCER</button>
                         </div>          
                     </div>
+                    <div id="sharePopup" class="popup d-none"> 
+                        <!-- <form novalidate>
+                            <label for="nom">Votre nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                            <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                            <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                            <button id="btnEnvoyerMail">Envoyer</button>
+                        </form> -->
+                        <img src="images/close.png" id="closeButton">
+                        <h2>Sur quel réseau ?</h2>
+                        <div class="social-container">
+                            <div class="slogo-container">
+                                <a class="facebook" target="_blank"><i class="fab fa-facebook fa-5x "></i></a>
+                                <p>Facebook</p>
+                            </div>                       
+                            <div class="slogo-container">
+                                <a class="whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp fa-5x"></i></a>
+                                <p>Whatsapp</p>
+                            </div>      
+                            <div class="slogo-container">
+                                <a class="linkedin" target="_blank"><i class="fab fa-linkedin fa-5x "></i></a>
+                                <p>Lindedin</p>
+                            </div>      
+                            <div class="slogo-container">
+                                <a class="reddit" target="_blank"><i class="fab fa-reddit fa-5x "></i></a>
+                                <p>Reddit</p>
+                            </div>        
+                        </div>
+                    </div>
                 </main>
-                <!-- FOOTER -->
                 <footer>
                     @Copyright : CFournier59
                 </footer>
             </div>
-                <!-- Popup de fin de partie -->
-                
-                    
-                
-                <!--popup de partage-->
-                <div id="popupPartage" class="d-none popup"> 
-                    <form novalidate>
-                        <label for="nom">Votre nom</label>
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                        <label for="email">Avec qui voulez-vous partager votre score ?</label>
-                        <input type="email" id="email" name="email" placeholder="nom@domaine.com">
-                        <button id="btnEnvoyerMail">Envoyer</button>
-                    </form>
-                </div>
-            
-        </div>       
+        </div>
+              
     </body>
 </html>

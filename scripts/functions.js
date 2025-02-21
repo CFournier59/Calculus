@@ -148,7 +148,7 @@ function gererFormulaire(score){
 // fonction qui gère le compte à rebours
 function compteARebours(answer){
     const time = document.querySelector(".time")
-    let sec = 3
+    let sec = 30
     let timer = setInterval(function(){           
         time.innerHTML= sec + "s"
         sec--
@@ -157,7 +157,7 @@ function compteARebours(answer){
             clearInterval(timer)
             answer.disabled = true
             lowOpacity()
-            togglePopup()
+            showScorePopup()
         }
     }, 1000)
 }

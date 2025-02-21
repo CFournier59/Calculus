@@ -18,20 +18,34 @@
 
 
 function lowOpacity() {
-     document.querySelector(".popupBackground").style.backgroundColor = "rgba(255, 255, 255, 0.5)"
-     document.querySelector("header").style.opacity = "0.5"
-     document.querySelector("footer").style.opacity = "0.5"
-}
-
-function togglePopup() {
+    document.querySelector(".popupBackground").style.backgroundColor = "rgba(255, 255, 255, 0.5)"
+    document.querySelector("header").style.opacity = "0.5"
+    document.querySelector("footer").style.opacity = "0.5"
     document.getElementById("question").style.display = "none"
     let panelBackground = document.querySelector(".panelBackground")
     panelBackground.classList.add("d-none")
+}
+
+function toggleSharePopup() {
+    if(document.getElementById("sharePopup").classList.contains("d-none")){
+        document.getElementById("popupScore").classList.toggle("d-none")
+        document.getElementById("popupScore").classList.toggle("d-flex")
+        document.getElementById("sharePopup").classList.toggle("d-none")
+        document.getElementById("sharePopup").classList.toggle("d-flex")
+    }
+    else{
+        document.getElementById("sharePopup").classList.toggle("d-none")
+        document.getElementById("sharePopup").classList.toggle("d-flex")
+        showScorePopup()
+    }
+}
+
+function showScorePopup() {
+    
     let popupScore = document.getElementById("popupScore")
-    popupScore.style.display = "flex"
-    document.getElementById("restartButton").addEventListener("click", () => {
-        location.reload()
-    })
+    popupScore.classList.toggle("d-none")
+    popupScore.classList.toggle("d-flex")
+    
 }
 
 
