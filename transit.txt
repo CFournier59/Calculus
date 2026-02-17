@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculus</title>
+        <!-- Inclusion du fichier css pour le style du jeu -->
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/popup.css">
+        <!-- font utilisées -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
+        <!-- Inclusion des scripts nécessaires pour faire fonctionner le jeu -->
+        <!-- Attention, l'ordre des fichiers js est important.  -->
+        <script src="scripts/config.js" defer></script>
+        <script src="scripts/popup.js" defer></script>
+        <script src="scripts/functions.js" defer></script>
+        <script src="scripts/calcul.js" defer></script>
+        <script src="scripts/main.js" defer></script>
+    </head>
+    <body>
+        <div id="playZone">
+            <!-- HEADER -->
+            <header>
+                <h1>Calculus</h1>
+                <h3>C'est le moment de voir si tu es vif en calcul!</h3>
+            </header>
+            <!-- MAIN -->
+            <main>
+                <div class="panelBackground grey">
+                    <div class="panel linearRed">
+                        <p id = "i1" class="hint">Addition, soustractions, multiplications... Résout-en le plus possible!</p>
+                        <img class="icon" src="images/icon_2.png">
+                        <div class="game score">0</div>
+                    </div>
+                    <div id="divBlue" class="panel linearBlue">
+                        <p id = "i2" class="hint">Utilise ton clavier pour taper la réponse et valide avec la touche "Entrée"</p>
+                        <button id="start" class="button a">START</button>
+                    </div>
+                    <div class="panel linearGreen">
+                        <p id = "i3" class="hint">Tu as 30 secondes pour déchainer tes neurones. Bon courage!</p>
+                        <img class="icon" src="images/icon_1.png">
+                        <div class="game time">30s</div>
+                    </div>    
+                </div>
+            </main>
+            <!-- FOOTER -->
+            <footer>
+                @Copyright : CFournier59
+            </footer>
+            <!-- Popup de fin de partie -->
+            <div class="popupBackground d-none">
+                <div id="popupScore" class="popup linearRed">
+                    <h2>C'est Terminé !</h2>
+                    <div id = "scoreCard">
+                        <div id = "description">
+                            <div class="scoreFinal">SCORE FINAL :</div>
+                            <div id="finalScore" class="red">0</div>
+                            <p>Visiblement t'as pas inventé l'eau chaude...</p>
+                        </div>
+                        <img src = "images/calcul_1.png">
+                    </div>
+                    <div id="buttonContainer">
+                        <button class="button b">PARTAGER</button>
+                        <button class="button b">RECOMMENCER</button>
+                    </div>          
+                </div>
+            </div>
+            <!--popup de partage-->
+            <div id="popupPartage" class="d-none popup"> 
+                <form novalidate>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                    <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                    <button id="btnEnvoyerMail">Envoyer</button>
+                </form>
+            </div>
+        </div>       
+    </body>
+</html>

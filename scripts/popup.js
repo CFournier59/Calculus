@@ -8,22 +8,46 @@
 /**
  * Cette fonction affiche la popup pour partager son score. 
  */
-function afficherPopup() {
-    let popupBackground = document.querySelector(".popupBackground")
+
+//function togglePopup() {
+    //let popupBackground = document.querySelector(".popupBackground")
     // La popup est masquée par défaut (display:none), ajouter la classe "active"
     // va changer son display et la rendre visible. 
-    popupBackground.classList.add("active")
+    //popupBackground.classList.toggle("d-none")
+//}
+
+
+function lowOpacity() {
+    document.querySelector(".popupBackground").style.backgroundColor = "rgba(255, 255, 255, 0.5)"
+    document.querySelector("header").style.opacity = "0.5"
+    document.querySelector("footer").style.opacity = "0.5"
+    document.getElementById("question").style.display = "none"
+    let panelBackground = document.querySelector(".panelBackground")
+    panelBackground.classList.add("d-none")
 }
 
-/**
- * Cette fonction cache la popup pour partager son score. 
- */
-function cacherPopup() {
-    let popupBackground = document.querySelector(".popupBackground")
-    // La popup est masquée par défaut (display:none), supprimer la classe "active"
-    // va rétablir cet affichage par défaut. 
-    popupBackground.classList.remove("active")
+function toggleSharePopup() {
+    if(document.getElementById("sharePopup").classList.contains("d-none")){
+        document.getElementById("popupScore").classList.toggle("d-none")
+        document.getElementById("popupScore").classList.toggle("d-flex")
+        document.getElementById("sharePopup").classList.toggle("d-none")
+        document.getElementById("sharePopup").classList.toggle("d-flex")
+    }
+    else{
+        document.getElementById("sharePopup").classList.toggle("d-none")
+        document.getElementById("sharePopup").classList.toggle("d-flex")
+        showScorePopup()
+    }
 }
+
+function showScorePopup() {
+    
+    let popupScore = document.getElementById("popupScore")
+    popupScore.classList.toggle("d-none")
+    popupScore.classList.toggle("d-flex")
+    
+}
+
 
 
 /**

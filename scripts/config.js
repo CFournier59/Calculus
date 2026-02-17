@@ -1,8 +1,2 @@
 
 const modificateur = [" + ", " - ", " X "];
-
-
-
-
-
-
